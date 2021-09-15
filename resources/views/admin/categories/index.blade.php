@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<table class="table">
+
+  <a href="{{route('admin.categories.create')}}" class="btn btn-secondary mb-5"> <i class="fas fa-plus me-2"></i> Crea nuova categoria</a>
+
+  <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>

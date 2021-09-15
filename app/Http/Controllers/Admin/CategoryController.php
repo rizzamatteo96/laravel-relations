@@ -90,12 +90,12 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $request->validate([
-            'name' => 'required|max:255|unique'
+            'name' => 'required|max:255'
         ]);
 
-        $slug = Str::slug($request->name, '-');
-
         $editCategory = $request->all();
+        $slug = Str::slug($editCategory['name'], '-');
+
         $editCategory['slug'] = $slug;
 
         $category->update($editCategory);

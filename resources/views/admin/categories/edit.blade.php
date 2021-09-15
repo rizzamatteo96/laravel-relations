@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <form action="{{route('admin.categories.update', $category->name)}}" method="POST">
+  <form action="{{route('admin.categories.update', $category->id)}}" method="POST">
     {{-- imposto il token e il metodo --}}
     @csrf
     @method('PUT')

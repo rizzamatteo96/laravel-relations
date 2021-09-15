@@ -9,6 +9,7 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Titolo</th>
+        <th scope="col">Categoria</th>
         <th scope="col">Azioni</th>
       </tr>
     </thead>
@@ -19,6 +20,7 @@
         <tr>
           <th scope="row">{{$post->id}}</th>
           <td>{{$post->title}}</td>
+          <td>{{$post->category->name}}</td>
           <td>
             <a href="{{route('admin.posts.show', $post->slug)}}" class="btn btn-outline-info px-3"><i class="fas fa-info"></i></a>
             <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-outline-secondary"><i class="far fa-edit"></i></a>

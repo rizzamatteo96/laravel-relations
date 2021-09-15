@@ -37689,8 +37689,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Boolean\corso-live#36\1-ESERCIZI\mamp_public\2021-09\2021-09-13\laravelboolpress\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Boolean\corso-live#36\1-ESERCIZI\mamp_public\2021-09\2021-09-13\laravelboolpress\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Boolean\corso-live#36\1-ESERCIZI\mamp_public\2021-09\2021-09-15\laravel-relations\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Boolean\corso-live#36\1-ESERCIZI\mamp_public\2021-09\2021-09-15\laravel-relations\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

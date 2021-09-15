@@ -100,7 +100,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-secondary" href="#">
+                                <a class="nav-link text-secondary" href="{{route('admin.categories.index')}}">
                                     <i class="fas fa-stream"></i>
                                     Categories
                                 </a>

@@ -28,7 +28,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.categories.create');
     }
 
     /**
@@ -39,7 +39,23 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validazione dei dati in ingresso
+        $request->validate([
+            'name' => 'required|max:255'
+        ]);
+
+        // tiro su i dati dal form e creo lo slug
+        $newCategory = $request->all();
+        $newCategory['slug'] = Str::slug($request->name, '-');
+
+        // creo una nuova istanza per la category table
+        $data = new Category();
+
+        // spedisco i dati al DB e li salvo
+        $data->fill($newCategory);
+        $data->save();
+
+        return redirect()->route('admin.categories.index');
     }
 
     /**
@@ -84,7 +100,7 @@ class CategoryController extends Controller
 
         $category->update($editCategory);
 
-        return redirect()->route('admin.posts.index');
+        return redirect()->route('admin.categories.index');
     }
 
     /**

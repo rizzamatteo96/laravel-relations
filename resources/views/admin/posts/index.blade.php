@@ -20,7 +20,18 @@
         <tr>
           <th scope="row">{{$post->id}}</th>
           <td>{{$post->title}}</td>
-          <td>{{$post->category->name}}</td>
+          <td>
+            {{-- @if ($post->category)
+              {{$post->category->name}}
+            @else
+              {{'nessuna categoria'}}
+            @endif --}}
+
+            
+            @if ($post->postCategory)
+              {{$post->postCategory->name}}
+            @endif
+          </td>
           <td>
             <a href="{{route('admin.posts.show', $post->slug)}}" class="btn btn-outline-info px-3"><i class="fas fa-info"></i></a>
             <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-outline-secondary"><i class="far fa-edit"></i></a>

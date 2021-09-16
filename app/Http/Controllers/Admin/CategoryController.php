@@ -64,8 +64,9 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show($slug)
     {
+        $category = Category::where('slug', $slug)->first();
         return view('admin.categories.show', compact('category'));
     }
 
